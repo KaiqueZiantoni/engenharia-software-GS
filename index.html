@@ -3,104 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstroPharma - Business Model Canvas</title>
+    <title>AstroPharma - Logística Preditiva Espacial</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <span class="brand">AstroPharma</span>
-        </div>
-    </nav>
 
-    <header class="hero">
-        <h1>Previsibilidade <span class="text-highlight">espacial</span> para a segurança,<br>
-        antecipação e <span class="text-highlight">saúde pública</span></h1>
-        <h2>Business Model Canvas</h2>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-accent">Astro</span>Pharma
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/apis.html">APIs & Monitoramento</a></li>
+                    <li><a href="pages/medicamentos.html">Medicamentos & Doenças</a></li>
+                    <li><a href="pages/integrantes.html">Equipe</a></li>
+                    <li><a href="pages/bmc.html">Business Model Canvas</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="canvas-container">
-        
-        <section class="glass-card segmentos" onclick="highlightBox(this)">
-            <h3>01. Segmentos de Clientes</h3>
-            <ul>
-                <li><strong>B2G (Governo):</strong> Ministério da Saúde, Secretarias Estaduais/Municipais de Saúde e SUS.</li>
-                <li><strong>B2B (Privado):</strong> Indústrias farmacêuticas, grandes distribuidoras de medicamentos e redes de farmácias de alcance nacional.</li>
-            </ul>
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-badge">Global Solution 2026/1 • Economia Espacial</div>
+                <h1>Previsibilidade Espacial para a <span class="text-gradient">Segurança em Saúde</span></h1>
+                <p class="hero-lead">Transformando a cadeia de suprimentos farmacêutica de reativa para puramente preditiva através do cruzamento de dados de satélites (ESA/NASA) e Inteligência Artificial.</p>
+                <div class="hero-actions">
+                    <a href="#simulador" class="btn btn-primary">Testar Simulador</a>
+                    <a href="#inovacao" class="btn btn-secondary">Conhecer a Inovação</a>
+                </div>
+            </div>
+            <div class="hero-bg-effect"></div>
         </section>
 
-        <section class="glass-card proposta" onclick="highlightBox(this)">
-            <h3>02. Proposta de Valor</h3>
-            <ul>
-                <li><strong>Para o SUS:</strong> Previsibilidade logística para garantir o acesso a medicamentos essenciais em zonas de risco e otimização de recursos (redução de desperdício por vencimento).</li>
-                <li><strong>Para o Setor Privado:</strong> Inteligência comercial estratégica para antecipar demandas regionais, evitando a ruptura de estoque (perda de vendas) diante de surtos sazonais.</li>
-            </ul>
+        <section id="inovacao" class="paradigm-section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>A Inversão do Fluxo Logístico</h2>
+                    <p>Como o AstroPharma muda o jogo da distribuição de medicamentos na Terra</p>
+                </div>
+                
+                <div class="paradigm-container">
+                    <div class="paradigm-card reactive">
+                        <h3>Modelo Tradicional Reativo</h3>
+                        <div class="status-indicator bad">Fluxo Atual</div>
+                        <p>Movimentação de grandes volumes de medicamentos apenas <strong>após o surto ser declarado</strong> ou quando os estoques locais zeram.</p>
+                        <ul>
+                            <li>Fretes emergenciais de alto custo</li>
+                            <li>Atrasos críticos na entrega (15+ dias)</li>
+                            <li>Desperdício por vencimento em locais errados</li>
+                        </ul>
+                    </div>
+
+                    <div class="paradigm-card predictive">
+                        <h3>Modelo AstroPharma Preditivo</h3>
+                        <div class="status-indicator good">Nossa Solução</div>
+                        <p>Identificação de gatilhos climáticos por satélite e emissão de ordens de transferência preventiva <strong>semanas antes do surto estourar</strong>.</p>
+                        <ul>
+                            <li>Distribuição antecipatória inteligente</li>
+                            <li>Medicamento disponível antes do primeiro caso</li>
+                            <li>Otimização drástica da Supply Chain</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="glass-card canais" onclick="highlightBox(this)">
-            <h3>03. Canais</h3>
-            <ul>
-                <li>Plataforma Web (Dashboard B2B/B2G).</li>
-                <li>Integração via API diretamente com os sistemas governamentais (como o e-SUS AF) e com os ERPs (sistemas de gestão) das empresas privadas.</li>
-                <li>Alertas automatizados.</li>
-            </ul>
+        <section id="simulador" class="simulator-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Simulador de Alertas Epidemiológicos</h2>
+                    <p>Selecione um gatilho climático monitorado por satélite para simular a resposta automatizada do sistema.</p>
+                </div>
+
+                <div class="simulator-widget">
+                    <div class="simulator-controls">
+                        <button class="sim-btn active" data-target="dengue">
+                            <span class="icon">☀️⛈️</span>
+                            <div>
+                                <strong>Anomalia Térmica + Chuva</strong>
+                                <small>Foco: Dengue / Zika</small>
+                            </div>
+                        </button>
+                        <button class="sim-btn" data-target="colera">
+                            <span class="icon">🌊</span>
+                            <div>
+                                <strong>Inundação Torrencial</strong>
+                                <small>Foco: Cólera / Leptospirose</small>
+                            </div>
+                        </button>
+                        <button class="sim-btn" data-target="respiratorio">
+                            <span class="icon">🔥🍂</span>
+                            <div>
+                                <strong>Seca Extrema + Queimadas</strong>
+                                <small>Foco: Crises Respiratórias</small>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="simulator-display">
+                        <div class="display-card glass" id="sim-result">
+                            <div class="display-header">
+                                <span class="badge badge-alert">Alerta Emitido</span>
+                                <span class="satellite-source">Satélite: Sentinel-3 (ESA)</span>
+                            </div>
+                            <h3 id="display-title">Alerta de Risco: Dengue</h3>
+                            <div class="display-grid">
+                                <div class="metric-box">
+                                    <span class="metric-label">Indicador Espacial</span>
+                                    <span class="metric-value" id="display-metric">Temp +3.2°C | Umidade Alagada</span>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="metric-label">Janela Epidemiológica</span>
+                                    <span class="metric-value text-warning" id="display-window">Surto estimado em 15 dias</span>
+                                </div>
+                            </div>
+                            <div class="action-box">
+                                <h4>Ordem de Transferência Preventiva Gerada:</h4>
+                                <p id="display-action">Remanejando 4.500 caixas de Paracetamol, Dipirona e Sais de Reidratação Oral do CD Central para as Unidades Básicas de Saúde (UBS) mapeadas na zona de impacto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="glass-card relacionamento" onclick="highlightBox(this)">
-            <h3>04. Relacionamento com Clientes</h3>
-            <ul>
-                <li>Atendimento corporativo e suporte técnico especializado (B2B/B2G).</li>
-                <li>Acordos de Nível de Serviço (SLA) rigorosos para garantir a disponibilidade do sistema.</li>
-                <li>Consultoria estratégica em dados epidemiológicos.</li>
-            </ul>
+        <section class="value-section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>Ecossistema de Valor Ponta a Ponta</h2>
+                    <p>Impacto estratégico estruturado para o setor público e privado</p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card glass">
+                        <div class="value-icon">🏛️</div>
+                        <h3>Setor Público (B2G)</h3>
+                        <p>Integração com o <strong>e-SUS AF</strong> para garantir proteção à saúde de comunidades isoladas, eliminação de desabastecimento em UBSs e redução drástica do desperdício de dinheiro público com medicamentos vencidos.</p>
+                    </div>
+                    <div class="value-card glass">
+                        <div class="value-icon">🏢</div>
+                        <h3>Setor Privado & Indústria (B2B)</h3>
+                        <p>Previsibilidade comercial estratégica para grandes distribuidoras e indústrias farmacêuticas. Evita a ruptura de estoque no PDV (perda de vendas) e otimiza as negociações B2B antes da alta sazonal.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-
-        <section class="glass-card receitas" onclick="highlightBox(this)">
-            <h3>05. Fontes de Receita</h3>
-            <ul>
-                <li><strong>Governo:</strong> Contratos de licitação para prestação de serviço contínuo (SaaS - Software as a Service) governamental.</li>
-                <li><strong>Indústria Privada:</strong> Assinatura da plataforma (Tiered pricing baseado no volume de dados consumidos) e venda de relatórios estratégicos sob demanda.</li>
-            </ul>
-        </section>
-
-        <section class="glass-card recursos" onclick="highlightBox(this)">
-            <h3>06. Recursos Principais</h3>
-            <ul>
-                <li><strong>Tecnologia:</strong> Servidores em nuvem, algoritmos de Inteligência Artificial Preditiva e banco de dados relacional (Oracle).</li>
-                <li><strong>Dados:</strong> Acesso contínuo às APIs de satélites da ESA/NASA.</li>
-                <li><strong>Capital Humano:</strong> Desenvolvedores, cientistas de dados e farmacêuticos especialistas em saúde pública.</li>
-            </ul>
-        </section>
-
-        <section class="glass-card atividades" onclick="highlightBox(this)">
-            <h3>07. Atividades Principais</h3>
-            <ul>
-                <li>Coleta, limpeza e processamento contínuo de dados meteorológicos e espaciais.</li>
-                <li>Treinamento e manutenção do modelo de IA para garantir a precisão das previsões.</li>
-                <li>Manutenção e segurança da integração do banco de dados com os sistemas do SUS e parceiros privados.</li>
-            </ul>
-        </section>
-
-        <section class="glass-card parcerias" onclick="highlightBox(this)">
-            <h3>08. Parcerias Principais</h3>
-            <ul>
-                <li>Agências espaciais e institutos de meteorologia (provedores dos dados).</li>
-                <li>Provedores de infraestrutura em nuvem (AWS, Azure ou Google Cloud).</li>
-                <li>Ministério da Saúde (como parceiro estratégico inicial para validação da base de dados).</li>
-            </ul>
-        </section>
-
-        <section class="glass-card custos" onclick="highlightBox(this)">
-            <h3>09. Estrutura de Custos</h3>
-            <ul>
-                <li>Desenvolvimento e manutenção da plataforma de software.</li>
-                <li>Custos de infraestrutura e hospedagem em nuvem (cloud computing).</li>
-                <li>Folha de pagamento da equipe de tecnologia e saúde.</li>
-                <li>Possíveis custos com licenciamento de APIs de dados espaciais mais complexos ou restritos.</li>
-            </ul>
-        </section>
-
     </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p><strong>AstroPharma</strong> — Solução para a Global Solution FIAP 2026/1</p>
+                <p class="student-credits">Desenvolvido por: Kaique Ziantoni Guedes Rosa | RM: 570294 | Turma: 1TDS</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/kaiqueziantoni" target="_blank" class="github-link">GitHub Repositório</a>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

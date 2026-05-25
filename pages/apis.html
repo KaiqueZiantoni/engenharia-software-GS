@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroPharma - APIs e Monitoramento</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/apis.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-accent">Astro</span>Pharma
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="apis.html" class="active">APIs & Monitoramento</a></li>
+                    <li><a href="medicamentos.html">Medicamentos & Doenças</a></li>
+                    <li><a href="integrantes.html">Equipe</a></li>
+                    <li><a href="bmc.html">Business Model Canvas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="page-header">
+            <div class="container text-center">
+                <div class="hero-badge">Arquitetura de Dados</div>
+                <h1>APIs e Monitoramento <span class="text-gradient">Espacial</span></h1>
+            </div>
+            <div class="header-glow"></div>
+        </section>
+
+        <section class="disclaimer-section">
+            <div class="container">
+                <div class="disclaimer-box glass">
+                    <div class="disclaimer-icon">💡</div>
+                    <div class="disclaimer-text">
+                        <strong>Nota de Arquitetura do Sistema (MVP):</strong> 
+                        As APIs listadas nesta página representam o ecossistema real de dados que o AstroPharma utilizará em sua versão de produção. Elas possuem endpoints abertos e são perfeitamente integráveis para fornecer telemetria de chuva, umidade e temperatura.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="api-providers">
+            <div class="container">
+                <div class="api-grid">
+                    
+                    <div class="api-card glass">
+                        <div class="api-image-placeholder">
+                            <img src="/images/image.png" alt="logo Copernicus">
+                        </div>
+                        <div class="api-content">
+                            <span class="badge badge-satellite">Satélites Sentinel</span>
+                            <h3>Copernicus Data Space (ESA)</h3>
+                            <p>A Agência Espacial Europeia fornece a API OData do programa Copernicus. É a fonte principal para mapeamento de temperatura do solo e anomalias de umidade.</p>
+                            <div class="api-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Endpoint Principal:</span>
+                                    <span class="detail-val">/odata/v1/Products</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Foco Epidemiológico:</span>
+                                    <span class="detail-val">Dengue e Zika</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="api-card glass">
+                        <div class="api-image-placeholder">
+                            <img src="/images/image copy.png" alt="logo NASA">
+                        </div>
+                        <div class="api-content">
+                            <span class="badge badge-satellite">Missão GPM</span>
+                            <h3>NASA POWER & GPM API</h3>
+                            <p>Projeto de Ciência Aberta da NASA que entrega dados meteorológicos em JSON. O sensor GPM é essencial para medir precipitação extrema (chuvas torrenciais).</p>
+                            <div class="api-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Formato de Saída:</span>
+                                    <span class="detail-val">JSON / NetCDF</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Foco Epidemiológico:</span>
+                                    <span class="detail-val">Cólera e Leptospirose</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="api-card glass">
+                        <div class="api-image-placeholder">
+                            <img src="/images/CPTEC.png" alt="logo INPE">
+                        </div>
+                        <div class="api-content">
+                            <span class="badge badge-satellite">Dados Nacionais</span>
+                            <h3>INPE - CPTEC & BDQueimadas</h3>
+                            <p>O Instituto Nacional de Pesquisas Espaciais fornece os modelos climáticos locais do Brasil e o monitoramento em tempo real de focos de calor e fumaça.</p>
+                            <div class="api-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Cobertura:</span>
+                                    <span class="detail-val">Território Brasileiro</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Foco Epidemiológico:</span>
+                                    <span class="detail-val">Crises Respiratórias (Asma)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="api-card glass">
+                        <div class="api-image-placeholder">
+                            <img src="/images/charter.png" alt="logo Space Charter">
+                        </div>
+                        <div class="api-content">
+                            <span class="badge badge-satellite">Resposta a Desastres</span>
+                            <h3>International Space Charter</h3>
+                            <p>Consórcio global que libera imagens de altíssima resolução imediatamente após grandes desastres naturais (enchentes, ciclones) para ajudar na logística emergencial.</p>
+                            <div class="api-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Caso de Uso:</span>
+                                    <span class="detail-val">Rotas Logísticas de Última Milha</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Ativação:</span>
+                                    <span class="detail-val">Sob demanda (Emergências)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="pipeline-section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>Fluxo de Ingestão de Dados (Pipeline)</h2>
+                    <p>Como as APIs alimentam o motor de inteligência artificial</p>
+                </div>
+                
+                <div class="pipeline-visual glass">
+                    <div class="pipe-step">
+                        <div class="pipe-icon">🛰️</div>
+                        <h4>1. Coleta via APIs</h4>
+                        <p>Requisições GET para ESA/NASA/INPE</p>
+                    </div>
+                    <div class="pipe-arrow">➔</div>
+                    <div class="pipe-step highlight">
+                        <div class="pipe-icon">🧠</div>
+                        <h4>2. Motor IA Preditiva</h4>
+                        <p>Cruzamento de anomalias com a base do e-SUS</p>
+                    </div>
+                    <div class="pipe-arrow">➔</div>
+                    <div class="pipe-step">
+                        <div class="pipe-icon">⚠️</div>
+                        <h4>3. Alerta & Logística</h4>
+                        <p>Ordem de transferência preventiva emitida</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="swagger-section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>Documentação de Integração (Swagger/OpenAPI)</h2>
+                    <p>Especificação técnica do Hub Preditivo exposto para o SUS e Indústria Farmacêutica (B2G/B2B)</p>
+                </div>
+
+                <div class="terminal-window glass">
+                    <div class="terminal-header">
+                        <div class="mac-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">openapi.yaml</div>
+                    </div>
+                    <div class="terminal-body">
+<pre><code><span class="yaml-key">openapi:</span> <span class="yaml-val">3.0.3</span>
+<span class="yaml-key">info:</span>
+  <span class="yaml-key">title:</span> AstroPharma API - Documentação do Hub Preditivo
+  <span class="yaml-key">description:</span> >
+    API B2B/B2G do AstroPharma. Consome telemetria geoespacial (ESA, NASA, INPE) 
+    e expõe endpoints de alertas epidemiológicos e recomendações logísticas 
+    preventivas para o SUS e Indústria Farmacêutica.
+  <span class="yaml-key">version:</span> <span class="yaml-val">1.0.0</span>
+<span class="yaml-key">servers:</span>
+  - <span class="yaml-key">url:</span> <span class="yaml-str">https://api.astropharma.com/v1</span>
+    <span class="yaml-key">description:</span> Servidor de Produção (MVP)
+
+<span class="yaml-key">paths:</span>
+  <span class="yaml-key">/alertas:</span>
+    <span class="yaml-key">get:</span>
+      <span class="yaml-key">summary:</span> Retorna os alertas epidemiológicos ativos
+      <span class="yaml-key">parameters:</span>
+        - <span class="yaml-key">name:</span> regiao
+          <span class="yaml-key">in:</span> query
+          <span class="yaml-key">required:</span> <span class="yaml-val">false</span>
+          <span class="yaml-key">schema:</span>
+            <span class="yaml-key">type:</span> string
+        - <span class="yaml-key">name:</span> risco
+          <span class="yaml-key">in:</span> query
+          <span class="yaml-key">required:</span> <span class="yaml-val">false</span>
+          <span class="yaml-key">schema:</span>
+            <span class="yaml-key">type:</span> string
+            <span class="yaml-key">enum:</span> [ALTO, CRITICO, MODERADO]
+      <span class="yaml-key">responses:</span>
+        <span class="yaml-str">'200':</span>
+          <span class="yaml-key">description:</span> Lista de alertas recuperada com sucesso.
+          <span class="yaml-key">content:</span>
+            <span class="yaml-key">application/json:</span>
+              <span class="yaml-key">schema:</span>
+                <span class="yaml-key">type:</span> array
+                <span class="yaml-key">items:</span>
+                  <span class="yaml-key">$ref:</span> <span class="yaml-str">'#/components/schemas/AlertaEpidemiologico'</span>
+
+  <span class="yaml-key">/alertas/{id}/logistica-preventiva:</span>
+    <span class="yaml-key">get:</span>
+      <span class="yaml-key">summary:</span> Sugere a ordem de transferência de estoque
+      <span class="yaml-key">parameters:</span>
+        - <span class="yaml-key">name:</span> id
+          <span class="yaml-key">in:</span> path
+          <span class="yaml-key">required:</span> <span class="yaml-val">true</span>
+          <span class="yaml-key">schema:</span>
+            <span class="yaml-key">type:</span> string
+      <span class="yaml-key">responses:</span>
+        <span class="yaml-str">'200':</span>
+          <span class="yaml-key">description:</span> Recomendação gerada com sucesso.
+          <span class="yaml-key">content:</span>
+            <span class="yaml-key">application/json:</span>
+              <span class="yaml-key">schema:</span>
+                <span class="yaml-key">$ref:</span> <span class="yaml-str">'#/components/schemas/RecomendacaoLogistica'</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p><strong>AstroPharma</strong> — Solução para a Global Solution FIAP 2026/1</p>
+                <p class="student-credits">Desenvolvido por: Kaique Ziantoni Guedes Rosa | RM: 570294 | Turma: 1TDS</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/kaiqueziantoni" target="_blank" class="github-link">GitHub Repositório</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

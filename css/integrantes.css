@@ -1,0 +1,262 @@
+.page-content {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.page-header {
+    padding: 60px 0 20px 0;
+    position: relative;
+}
+
+.header-glow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100%;
+    background: radial-gradient(ellipse at top, rgba(0,242,254,0.1) 0%, rgba(0,0,0,0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.profile-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 48px;
+    padding: 48px;
+    border-radius: 20px;
+    background: rgba(15, 22, 46, 0.4);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.profile-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding-right: 48px;
+}
+
+.profile-avatar-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 24px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    position: relative;
+    z-index: 2;
+}
+
+.avatar-glow {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 50%;
+    background: var(--primary);
+    filter: blur(20px);
+    opacity: 0.25;
+    z-index: 1;
+}
+
+.academic-info {
+    margin-bottom: 32px;
+}
+
+.rm-tag {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.class-tag {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.profile-socials {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-btn.linkedin {
+    background: rgba(10, 102, 194, 0.1);
+    color: #0a66c2;
+    border: 1px solid rgba(10, 102, 194, 0.3);
+}
+
+.social-btn.linkedin:hover {
+    background: #0a66c2;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(10, 102, 194, 0.4);
+    transform: translateY(-2px);
+}
+
+.social-btn.github {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.social-btn.github:hover {
+    background: #ffffff;
+    color: #070b19;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.profile-bio h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.role-badge {
+    display: inline-block;
+    background: rgba(0, 242, 254, 0.1);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.experience-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--success);
+    margin-bottom: 24px;
+}
+
+.bio-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.formations-container h3 {
+    font-size: 20px;
+    margin-bottom: 24px;
+    color: var(--text-main);
+    border-left: 3px solid var(--secondary);
+    padding-left: 12px;
+}
+
+.formations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.formation-item {
+    background: rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.03);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.formation-item.grad-card {
+    grid-column: span 2; 
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.05) 0%, rgba(15, 22, 46, 0.6) 100%);
+    border: 1px solid rgba(0, 242, 254, 0.25);
+}
+
+.formation-item.grad-card.tech h4 {
+    color: var(--primary);
+}
+
+.formation-item.grad-card.pharma h4 {
+    color: var(--secondary);
+}
+
+.f-icon {
+    font-size: 24px;
+    background: rgba(255,255,255,0.05);
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.formation-item h4 {
+    font-size: 17px;
+    color: #e2e8f0;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.institution {
+    font-size: 14px;
+    color: #a7f3d0; 
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.formation-item p:not(.institution) {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+    .profile-card {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 32px;
+    }
+    
+    .profile-sidebar {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-right: 0;
+        padding-bottom: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .formations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .formation-item.grad-card {
+        grid-column: span 1;
+    }
+}
